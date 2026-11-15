@@ -9,19 +9,19 @@ This folder is an [Agent Skill](https://agentskills.io/specification): `SKILL.md
 The [skills CLI](https://github.com/vercel-labs/skills) (`npx skills`, [skills.sh](https://skills.sh)) discovers this folder at `skills/content-drafting-agent/SKILL.md` and copies it into `.agents/skills/`, which Cursor and other surfaces the CLI supports then load:
 
 ```bash
-npx skills add mike-gvs/gvs-skills --skill content-drafting-agent
+npx skills add goldvalleysolutions/gvs-skills --skill content-drafting-agent
 ```
 
 The `skills` CLI needs Node.js 22.20 or newer. Older Node, for example 20.x, crashes with `fs/promises does not provide an export named 'glob'`. Workaround:
 
 ```bash
-npx -y -p node@22 -p skills -- skills add mike-gvs/gvs-skills --skill content-drafting-agent
+npx -y -p node@22 -p skills -- skills add goldvalleysolutions/gvs-skills --skill content-drafting-agent
 ```
 
 List skills in the catalog without installing:
 
 ```bash
-npx skills add mike-gvs/gvs-skills --list
+npx skills add goldvalleysolutions/gvs-skills --list
 ```
 
 List skills already installed in the current project:
@@ -33,11 +33,9 @@ npx skills list
 From a non-default git ref or a local clone of this repo:
 
 ```bash
-npx skills add mike-gvs/gvs-skills#<branch> --skill content-drafting-agent
+npx skills add goldvalleysolutions/gvs-skills#<branch> --skill content-drafting-agent
 npx skills add ./ --skill content-drafting-agent
 ```
-
-Until this catalog is on the repo default branch, use the `#<branch>` or local-path form.
 
 ## Before you start
 
@@ -52,7 +50,7 @@ Confirmed from [Claude Code skills](https://code.claude.com/docs/en/skills) and 
 **Marketplace (Claude Code):** this repo ships `.claude-plugin/marketplace.json`. In Claude Code:
 
 ```text
-/plugin marketplace add mike-gvs/gvs-skills
+/plugin marketplace add goldvalleysolutions/gvs-skills
 ```
 
 Then browse plugins, select `gvs-skills`, install `content-drafting-agent`, or:
@@ -73,7 +71,7 @@ Confirmed from [Build skills (ChatGPT / Codex)](https://learn.chatgpt.com/docs/b
 
 **No Claude-style marketplace here.** ChatGPT and Codex do not read `.claude-plugin/marketplace.json`. Their plugin catalog is a separate system (OpenAI plugins / `.agents/plugins/marketplace.json`). This repo is not published to the ChatGPT Plugins Directory.
 
-**Codex / ChatGPT desktop local skills:** `npx skills add mike-gvs/gvs-skills --skill content-drafting-agent` copies this folder to `.agents/skills/content-drafting-agent/`. Or copy it there yourself (or to `$HOME/.agents/skills/content-drafting-agent`). Codex scans `.agents/skills`. The built-in `$skill-installer` can also pull skills from other GitHub repos for local Codex use.
+**Codex / ChatGPT desktop local skills:** `npx skills add goldvalleysolutions/gvs-skills --skill content-drafting-agent` copies this folder to `.agents/skills/content-drafting-agent/`. Or copy it there yourself (or to `$HOME/.agents/skills/content-drafting-agent`). Codex scans `.agents/skills`. The built-in `$skill-installer` can also pull skills from other GitHub repos for local Codex use.
 
 **ChatGPT custom GPT / Project instructions:** paste `SKILL.md` into the instructions. Upload `references/checks.md` and your filled voice guide (or paste them). Do not enable actions that send email, post, or call an API.
 
@@ -90,8 +88,8 @@ Confirmed from [About agent skills](https://docs.github.com/en/copilot/concepts/
 **GitHub CLI** (`gh` 2.90.0+, `gh skill` is public preview):
 
 ```text
-gh skill preview mike-gvs/gvs-skills content-drafting-agent
-gh skill install mike-gvs/gvs-skills content-drafting-agent
+gh skill preview goldvalleysolutions/gvs-skills content-drafting-agent
+gh skill install goldvalleysolutions/gvs-skills content-drafting-agent
 ```
 
 Inspect the skill before installing. Copilot loads it when the task matches the description, or you can invoke it with `/content-drafting-agent`.

@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
-INSTALL_PREFIX = "npx skills add mike-gvs/gvs-skills --skill "
+INSTALL_PREFIX = "npx skills add goldvalleysolutions/gvs-skills --skill "
 
 
 def _skill_folders() -> list[str]:
