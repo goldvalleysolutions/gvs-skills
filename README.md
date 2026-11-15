@@ -8,7 +8,7 @@ Maintained by Gold Valley Solutions. License: [MIT](LICENSE). This repo is publi
 
 | Name | Description | Install | Safety |
 |---|---|---|---|
-| [content-drafting-agent](skills/content-drafting-agent/) | Turns a filled voice guide plus rough notes into 1 blog post, 2 LinkedIn posts, and 1 newsletter blurb | `npx skills add mike-gvs/gvs-skills --skill content-drafting-agent` | draft-only |
+| [content-drafting-agent](skills/content-drafting-agent/) | Turns a filled voice guide plus rough notes into 1 blog post, 2 LinkedIn posts, and 1 newsletter blurb | `npx skills add goldvalleysolutions/gvs-skills --skill content-drafting-agent` | draft-only |
 
 ## Install
 
@@ -17,19 +17,19 @@ Maintained by Gold Valley Solutions. License: [MIT](LICENSE). This repo is publi
 The [skills CLI](https://github.com/vercel-labs/skills) (`npx skills`, [skills.sh](https://skills.sh)) discovers `skills/<name>/SKILL.md` in this catalog and copies the skill into `.agents/skills/`, which Cursor and other surfaces the CLI supports then load:
 
 ```bash
-npx skills add mike-gvs/gvs-skills --skill content-drafting-agent
+npx skills add goldvalleysolutions/gvs-skills --skill content-drafting-agent
 ```
 
 The `skills` CLI needs Node.js 22.20 or newer. Older Node, for example 20.x, crashes with `fs/promises does not provide an export named 'glob'`. Workaround:
 
 ```bash
-npx -y -p node@22 -p skills -- skills add mike-gvs/gvs-skills --skill content-drafting-agent
+npx -y -p node@22 -p skills -- skills add goldvalleysolutions/gvs-skills --skill content-drafting-agent
 ```
 
 List skills in the catalog without installing:
 
 ```bash
-npx skills add mike-gvs/gvs-skills --list
+npx skills add goldvalleysolutions/gvs-skills --list
 ```
 
 List skills already installed in the current project:
@@ -41,18 +41,16 @@ npx skills list
 From a non-default git ref or a local clone:
 
 ```bash
-npx skills add mike-gvs/gvs-skills#<branch> --skill content-drafting-agent
+npx skills add goldvalleysolutions/gvs-skills#<branch> --skill content-drafting-agent
 npx skills add ./ --skill content-drafting-agent
 ```
-
-Until this catalog is on the repo default branch, use the `#<branch>` or local-path form. `npx skills add mike-gvs/gvs-skills` clones the default branch.
 
 ### Claude Code marketplace (confirmed)
 
 This repo includes `.claude-plugin/marketplace.json` so Claude Code can add it as a marketplace, list the plugin, and install the skill ([anthropics/skills](https://github.com/anthropics/skills), [Claude Code plugins](https://code.claude.com/docs/en/plugins/marketplace-reference)):
 
 ```text
-/plugin marketplace add mike-gvs/gvs-skills
+/plugin marketplace add goldvalleysolutions/gvs-skills
 /plugin install content-drafting-agent@gvs-skills
 ```
 
@@ -69,8 +67,8 @@ Cursor has no marketplace listing for this catalog. `npx skills add` (above) cop
 No Copilot marketplace manifest in this repo. Copy the skill into `.github/skills/`, `.claude/skills/`, or `.agents/skills/`, or (`gh` 2.90+):
 
 ```text
-gh skill preview mike-gvs/gvs-skills content-drafting-agent
-gh skill install mike-gvs/gvs-skills content-drafting-agent
+gh skill preview goldvalleysolutions/gvs-skills content-drafting-agent
+gh skill install goldvalleysolutions/gvs-skills content-drafting-agent
 ```
 
 See [Adding agent skills for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
